@@ -33,7 +33,7 @@
     <input type="text" name="input" value="" placeholder="WAEC" id="screen" size="20" readonly>
     <br>
     <div class="btn-group">
-      <a href="index.html"> <input class="btn clear" type="button" name="clear" value="Home" onclick="deerunz.input.value = ''"> </a>
+      <input class="btn clear" type="button" name="clear" value="Home" onclick="deerunz.input.value = ''">
     </div>
     <div class="btn-group">
    
@@ -54,16 +54,12 @@
     var c = new Date();
     document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
 
-   var pinMapping = {
-    "0075": "page1.html", // PIN: Page
-    "7700": "page2.html", // PIN: Page
-    "5070": "maths.html", // PIN: Math
-    "7050": "english.html", // PIN: English
-    "0570": "biology.html", // PIN: Biology
-    "7500": "physics.html", // PIN: Physics
-    "0057": "chemistry.html" // PIN: Chemistry
-};
-
+    var pinMapping = {
+      "0075": "civic.html", // PIN: Page
+      "7775": "marketing.html", // PIN: Page
+      "7550": "crs.html",
+      "5505": "physicsp.html",
+      // Add more PINs and their corresponding pages as needed
     };
 
     function checkPIN() {
@@ -77,5 +73,5 @@
     }
   </script>
 </body>
-
+</html>
 </html>
