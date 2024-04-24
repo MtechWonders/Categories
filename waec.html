@@ -54,37 +54,6 @@
     var c = new Date();
     document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
 
-    var currentSubject = "";
-
-    function updateSubject(subject) {
-      currentSubject = subject;
-      deerunz.input.value = subject;
-    }
-
-    function checkPIN() {
-      // Define subject PINs
-      var pinMapping = {
-        "Maths": "0000", // Example PIN for "Maths"
-        "English": "5555", // Example PIN for "English"
-        "Waec": "7777", // Example PIN for "Waec"
-        // Add more subjects and their PINs as needed
-      };
-
-      var enteredPIN = document.getElementById("screen").value.trim();
-
-      // Check if currentSubject is in the pinMapping
-      if (pinMapping.hasOwnProperty(currentSubject)) {
-        var correctPIN = pinMapping[currentSubject];
-        if (enteredPIN === correctPIN) {
-          // Redirect to the subject page
-          window.location.href = currentSubject.toLowerCase() + ".html";
-        } else {
-          alert("Incorrect PIN. Please try again.");
-        }
-      } else {
-        alert("Invalid subject.");
-      }
-    }
   </script>
 </body>
 
