@@ -54,6 +54,17 @@
     var c = new Date();
     document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
 
+    var correctPIN = "0075"; // Define the correct PIN
+
+    function checkPIN() {
+      var enteredPIN = document.getElementById("screen").value.trim();
+      if (enteredPIN === correctPIN) {
+        // Redirect to the specified HTML page
+        window.location.href = "specified_page.html";
+      } else {
+        alert("Incorrect PIN. Please try again.");
+      }
+    }
   </script>
 </body>
 
