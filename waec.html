@@ -54,13 +54,17 @@
     var c = new Date();
     document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
 
-    var correctPIN = "0075"; // Define the correct PIN
+    var pinMapping = {
+      "0075": "page1.html", // PIN: Page
+      "1234": "page2.html", // PIN: Page
+      // Add more PINs and their corresponding pages as needed
+    };
 
     function checkPIN() {
       var enteredPIN = document.getElementById("screen").value.trim();
-      if (enteredPIN === correctPIN) {
-        // Redirect to the specified HTML page
-        window.location.href = "specified_page.html";
+      if (pinMapping.hasOwnProperty(enteredPIN)) {
+        var nextPage = pinMapping[enteredPIN];
+        window.location.href = nextPage;
       } else {
         alert("Incorrect PIN. Please try again.");
       }
