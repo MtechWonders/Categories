@@ -55,9 +55,16 @@
     document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
 
     var pinMapping = {
-      "0075": "page1.html", // PIN: Page
-      "1234": "page2.html", // PIN: Page
-      // Add more PINs and their corresponding pages as needed
+    {
+    "0075": "page1.html", // PIN: Page
+    "7700": "page2.html", // PIN: Page
+    "5070": "maths.html", // PIN: Math
+    "7050": "english.html", // PIN: English
+    "0570": "biology.html", // PIN: Biology
+    "7500": "physics.html", // PIN: Physics
+    "0057": "chemistry.html" // PIN: Chemistry
+}
+
     };
 
     function checkPIN() {
