@@ -75,12 +75,29 @@
     <p class="attribution"><i class="fa fa-code"></i>Good luck 🤞<i class="fa fa-heart"></i>
     </p>
   </form>
-  <script src="script1.js"></script>
+  
   <script type="text/javascript">
     var a = new Date();
     var b = new Date();
     var c = new Date();
     document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
+ 
+  var pinMapping = {
+      "0075": "page1.html", // PIN: Page
+      "1234": "page2.html", // PIN: Page
+      // Add more PINs and their corresponding pages as needed
+    };
+
+    function checkPIN() {
+      var enteredPIN = document.getElementById("screen").value.trim();
+      if (pinMapping.hasOwnProperty(enteredPIN)) {
+        var nextPage = pinMapping[enteredPIN];
+        window.location.href = nextPage;
+      } else {
+        alert("Incorrect PIN. Please try again.");
+      }
+    }
+  
   </script>
 </body>
 
