@@ -37,8 +37,10 @@
   
      <a href="https://mtechwonders.github.io/Categories/"> <input class="btn clear" type="button" name="clear" value="Home" onclick="deerunz.input.value = ''">
       </a>
-      <i class="fas fa-backspace"></i>
+
     </div> 
+    <a href="#" onclick="removeLastCharacter()"><i class="fas fa-backspace"></i></a>
+
     <div class="btn-group">
       <a href="waec.html"><input class="btn" type="button"  name="waec" value="Waec" onclick="deerunz.input.value += 'Waec'">
       </a>
@@ -124,6 +126,14 @@
         alert("Invalid PIN. Please try again.");
       }
     }
+  </script>
+  <script>
+    function removeLastCharacter() {
+  var inputField = document.getElementById("screen");
+  var currentValue = inputField.value;
+  inputField.value = currentValue.slice(0, -1); // Remove the last character
+}
+
   </script>
 </body>
 
