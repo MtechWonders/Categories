@@ -1,1 +1,141 @@
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAEC</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <form class="container" id="deerunz">
+    <span id="time"></span>
+    <div class="top-icons">
+      <i class="fa fa-signal"></i>
+      <i class="fa fa-wifi"></i>
+      <i class="fa fa-battery-half"></i>
+    </div>
+    <input type="text" name="input" value="" placeholder="WAEC" id="screen" size="20" readonly>
+    <br>
+    <div class="btn-group">
+      <input class="btn clear" type="button" name="clear" value="Home" onclick="deerunz.input.value = ''">
+    </div>
+    <div class="btn-group">
+   
+    </div>
+    <div class="btn-group">
+      <input class="btn black" type="button" name="zero" value="0" onclick="deerunz.input.value += '0'">
+      <input class="btn black" id="pinInput" maxlength="4" type="button" name="five" value="5" onclick="deerunz.input.value += '5'">
+      <input class="btn black" type="button" name="seven" value="3" onclick="deerunz.input.value += '3'"><br><br>
+     <input class="btn black" type="button" name="seven" value="6" onclick="deerunz.input.value += '6'">
+      <input class="btn black" type="button" name="seven" value="7" onclick="deerunz.input.value += '7'">
+      <input class="btn black" type="button" name="seven" value="8" onclick="deerunz.input.value += '8'">
+      
+      <br> <br> <br>
+      <input class="btn clear" class="btn-group" type="button" name="Enter" value="Enter" onclick="checkPIN()">
+    </div>
+    <p class="attribution"><i class="fa fa-code"></i>Good luck 🤞</p>
+  </form>
+  <script src="script1.js"></script>
+  <script type="text/javascript">
+    var a = new Date();
+    var b = new Date();
+    var c = new Date();
+    document.getElementById("time").innerHTML = a.getHours() + ":" + b.getMinutes();
+
+    var pinMapping = {
+"0773" : "Biology o.html",
+"5088" : "physics o.html",
+"6675" : "Chemistry o.html",
+"0807" : "Literature.html",
+"5553" : "Government.html",
+"7580" : "Geography.html",
+"5355" : "Economics.html",
+"3768" : "Commerce.html",
+"5537" : "Further Maths",
+"0080" : "Accounting.html",
+"0337" : "Agric o.html",
+"6603" : "Igbo.html",
+"8037" : "Yoruba.html",
+"3688" : "Hausa.html",
+"3066" : "Office Practice.html",
+"7786" : "Insurance.html",
+"0830" : "I.C.T.html",
+"5330" : "Data Processing.html",
+"0006" : "Tourism.html",
+"6038" : "Physical Health Education.html",
+"5338" : "Health Science.html",
+"7783" : "Animal Husbandry.html",
+"6800" : "Book Keeping.html",
+"5663" : "Computer Studies.html",
+"3508" : "Health Education.html",
+"0586" : "Animal Husbandry practical.html",
+"5560" : "Chemistry practical.html",
+"8077" : "Biology.html",
+"6668" : "Physics practical.html",
+"5577": "Agric.html",
+"7507": "technical.html",
+      "7055": "",
+      "7005": "",
+      "5007": "",
+      "0057": "",
+      "5707": "",
+     
+      "0853": "",
+      "0558": "",
+      "8687": "",
+      "7305": "",
+      "0003": "",
+      "0307": "",
+      "3370": "",
+      "6733": "",
+      "3376": "",
+      "8870": "",
+      "0768": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      "": "",
+      
+      
+      // Add more PINs and their corresponding pages as needed
+    };
+
+    function checkPIN() {
+      var enteredPIN = document.getElementById("screen").value.trim();
+      if (pinMapping.hasOwnProperty(enteredPIN)) {
+        var nextPage = pinMapping[enteredPIN];
+        window.location.href = nextPage;
+      } else {
+        alert("You de whine?. 😏");
+      }
+    }
+  </script>
+</body>
+</html>
+</html>
