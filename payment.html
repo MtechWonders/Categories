@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Enquiries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #128C7E;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="redirectToWhatsApp()">Click here for enquiries on WhatsApp</button>
+
+  <script>
+    function redirectToWhatsApp() {
+      var phoneNumber = '+2349062802362';
+      var message = 'Hi, I have an enquiry.';
+      var encodedMessage = encodeURIComponent(message);
+      var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + encodedMessage;
+      window.location.href = whatsappURL;
+    }
+  </script>
+</body>
+</html>
