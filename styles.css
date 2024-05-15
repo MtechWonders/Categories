@@ -151,3 +151,6 @@ input:not(.black):not(#screen):hover {
 #plus{
 	margin-top: 12px;
 }
+img{
+	width: 300px;
+}
